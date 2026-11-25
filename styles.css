@@ -364,6 +364,18 @@ h2 { font-size: clamp(28px, 3.6vw, 42px); line-height: 1.08; letter-spacing: -1.
 .install-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .install .card h3 { margin-top: 10px; }
 .signed-note { max-width: 76ch; margin-top: 22px; }
+.fix-card {
+  margin-top: 22px;
+  padding: 24px 26px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 75, 62, 0.34);
+  background: linear-gradient(165deg, rgba(58, 18, 24, 0.55), rgba(16, 27, 38, 0.6));
+}
+.fix-card h3 { margin: 0 0 12px; font-size: 18px; letter-spacing: -0.2px; }
+.fix-list { margin: 0; padding-left: 20px; display: grid; gap: 10px; font-size: 14.5px; color: #cfe0ee; }
+.fix-list li::marker { color: var(--alarm); font-weight: 700; }
+.fix-list strong { color: var(--ink); }
+.fix-list em { color: var(--mint); font-style: normal; }
 .signed-note code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11.5px; color: #9fb4c6; background: rgba(34, 50, 63, 0.7); padding: 2px 6px; border-radius: 6px; }
 .caveat {
   margin: 28px 0 0;
