@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SafeTap SOS — help is three presses away</title>
+<meta name="description" content="SafeTap SOS is an offline-first Android emergency app. Triple-press the power button and it runs a 5-second cancellable countdown, sounds a siren, blinks the flashlight, dials 999/911 and texts your contacts with your live location." />
+<meta name="theme-color" content="#060A0F" />
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="glow glow-a" aria-hidden="true"></div>
+<div class="glow glow-b" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 48 48" width="34" height="34">
+        <defs>
+          <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#FF4B3E"/><stop offset="1" stop-color="#C3132A"/>
+          </linearGradient>
+        </defs>
+        <path d="M24 3.5 40 9.2v12.1c0 10.4-6.6 18.9-16 22.9-9.4-4-16-12.5-16-22.9V9.2Z" fill="url(#bg)"/>
+        <path d="M24 14.5v9.8" stroke="#fff" stroke-width="4.2" stroke-linecap="round"/>
+        <circle cx="24" cy="31" r="2.6" fill="#fff"/>
+      </svg>
+    </span>
+    <span class="brand-text">SafeTap<em>SOS</em></span>
+  </a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#plans">Plans</a>
+    <a href="#install">Install</a>
+  </nav>
+  <a class="btn btn-ghost nav-cta" href="#download">Download</a>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="pill"><span class="dot"></span> Android 7.0+ · Kotlin · Jetpack Compose</p>
+      <h1>Help is three<br/><span class="alarm-text">presses</span> away.</h1>
+      <p class="lede">
+        SafeTap SOS turns your phone into a panic button. Triple-press the power key and it runs a
+        <strong>5-second cancellable countdown</strong>, sounds a siren, blinks the flashlight, dials
+        <strong>999 / 911</strong> and texts your emergency contacts with a live map link — even when
+        the network drops.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="download/SafeTapSOS-v1.0.0.apk" download>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 18.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download APK · 24 MB
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/sabbirmustakim800-netizen/safetap-sos" target="_blank" rel="noopener">View source</a>
+      </div>
+      <p class="fineprint">Debug-signed build · sideload only · no Play Store account needed</p>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orb-stage">
+        <span class="ring ring-1"></span>
+        <span class="ring ring-2"></span>
+        <span class="ring ring-3"></span>
+        <div class="orb">
+          <span class="orb-inner">
+            <strong>SOS</strong>
+            <small>hold to arm</small>
+          </span>
+        </div>
+        <div class="countdown-badge">
+          <span class="cd-label">cancellable</span>
+          <span class="cd-value">5<span>s</span></span>
+        </div>
+      </div>
+      <ul class="channel-chips">
+        <li><span class="ch-dot siren"></span> Siren + torch</li>
+        <li><span class="ch-dot call"></span> 999 / 911 call</li>
+        <li><span class="ch-dot sms"></span> SMS + location</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="strip-item"><strong>3×</strong><span>power presses<span class="sub">within 2.5 s</span></span></div>
+    <div class="strip-item"><strong>5 s</strong><span>to cancel<span class="sub">before it sends</span></span></div>
+    <div class="strip-item"><strong>999</strong><span>local emergency<span class="sub">plus 911</span></span></div>
+    <div class="strip-item"><strong>0</strong><span>network required<span class="sub">queued, then retried</span></span></div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="section-head">
+      <p class="eyebrow">What it does</p>
+      <h2>Built for the worst ten seconds of your day.</h2>
+      <p class="section-lede">Every channel fires in parallel, and the ones that can't reach the network wait in a durable queue instead of disappearing.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <span class="card-icon">⌁</span>
+        <h3>Triple power-press</h3>
+        <p>A foreground guard service watches screen on/off transitions and arms the alert on the third press inside 2.5 seconds.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon">⏱</span>
+        <h3>5-second cancel window</h3>
+        <p>Accidental press? Cancel from the overlay or the notification before anything is dialled or sent.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon">🔦</span>
+        <h3>Siren, vibration, torch</h3>
+        <p>The alert screen plus a siren loop and a blinking flashlight make you findable in the dark and the noise.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon">✆</span>
+        <h3>Call then text</h3>
+        <p>Dials 999, then sends an SMS with your safety card, coordinates and a Google Maps link to each contact.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon">⤾</span>
+        <h3>Offline queue</h3>
+        <p>No signal or no SMS permission? WorkManager keeps the alert and retries until it lands.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon">✚</span>
+        <h3>Medical safety card</h3>
+        <p>Blood group, allergies, medication and notes travel with every message so responders know what matters.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon">☁</span>
+        <h3>Firebase backup</h3>
+        <p>Optional Firestore backup of each alert under an anonymous account — never blocks the SMS flow.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon">◉</span>
+        <h3>Ads where they belong</h3>
+        <p>A single banner in Settings and History on the free plan. Never on the SOS button or the countdown.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="how" class="section how">
+    <div class="section-head">
+      <p class="eyebrow">The flow</p>
+      <h2>From press to message in under five seconds.</h2>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><span class="step-no">01</span><h3>Arm</h3><p>Triple-press the power key, or tap and hold the orb on the home screen.</p></li>
+      <li class="reveal"><span class="step-no">02</span><h3>Count down</h3><p>A five-second ring gives you one last chance to cancel.</p></li>
+      <li class="reveal"><span class="step-no">03</span><h3>Fire every channel</h3><p>GPS fix (with last-known fallback) → WELL dial intent → siren and torch → SMS to contacts.</p></li>
+      <li class="reveal"><span class="step-no">04</span><h3>Keep trying</h3><p>Failed sends queue locally and retry automatically; history shows each channel's status.</p></li>
+    </ol>
+  </section>
+
+  <section id="plans" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Plans</p>
+      <h2>Free is a real panic button.</h2>
+      <p class="section-lede">Pro removes every ad and unlocks alerts to all of your contacts. Switching plan unloads the banner instantly — no restart.</p>
+    </div>
+    <div class="plans">
+      <article class="plan reveal">
+        <header><h3>Free</h3><p class="plan-price">৳0</p></header>
+        <ul>
+          <li>999 / 911 dial and SMS fallback</li>
+          <li>Safety card, siren, torch, history</li>
+          <li>Alerts one emergency contact</li>
+          <li class="muted">Banner in Settings &amp; History</li>
+        </ul>
+        <a class="btn btn-ghost full" href="#download">Get the APK</a>
+      </article>
+      <article class="plan plan-pro reveal">
+        <span class="plan-badge">Pro</span>
+        <header><h3>Pro</h3><p class="plan-price">Every channel,<br/>no ads</p></header>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Alerts up to three contacts</li>
+          <li>Every AdMob view unloaded</li>
+          <li>Firestore backup of each alert</li>
+        </ul>
+        <a class="btn btn-primary full" href="#download">Try it in the app</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="install" class="section install">
+    <div class="section-head">
+      <p class="eyebrow">Install</p>
+      <h2>No Android SDK required.</h2>
+    </div>
+    <div class="install-grid">
+      <div class="card reveal">
+        <span class="step-no">01</span>
+        <h3>Download the APK</h3>
+        <p>Tap the download button on this page, straight from your phone.</p>
+      </div>
+      <div class="card reveal">
+        <span class="step-no">02</span>
+        <h3>Allow this source</h3>
+        <p>Android will ask to allow installs from your browser — accept once, then install.</p>
+      </div>
+      <div class="card reveal">
+        <span class="step-no">03</span>
+        <h3>Set up the card</h3>
+        <p>Add blood group, allergies and 1–3 contacts, then grant SMS, call and location permissions.</p>
+      </div>
+    </div>
+    <p class="caveat">
+      <strong>Honest caveat:</strong> Android exposes no API for raw power-key presses, so SafeTap counts screen
+      on/off transitions. Aggressive OEM battery managers (Xiaomi, Huawei, Oppo) should be told to exempt the app.
+      The on-screen orb and the 999 quick-dial work on every device regardless.
+    </p>
+  </section>
+
+  <section id="download" class="cta">
+    <div class="cta-inner">
+      <h2>Put a panic button in your pocket.</h2>
+      <p>Free, offline-first, and it never asks for an account to sound the alarm.</p>
+      <div class="hero-actions center">
+        <a class="btn btn-primary" href="download/SafeTapSOS-v1.0.0.apk" download>Download SafeTap SOS · v1.0.0</a>
+        <a class="btn btn-ghost" href="https://github.com/sabbirmustakim800-netizen/safetap-sos" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <span class="brand-text">SafeTap<em>SOS</em></span>
+    <p>Kotlin · Jetpack Compose · Material 3 · Firebase · AdMob · WorkManager</p>
+  </div>
+  <p class="footer-note">Not a replacement for emergency services. If you can dial, dial.</p>
+</footer>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.18 });
+    items.forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+  } else {
+    items.forEach((el) => el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
