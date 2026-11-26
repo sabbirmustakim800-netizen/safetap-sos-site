@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy policy & disclaimer · SafeTap SOS</title>
+  <meta name="description" content="How SafeTap SOS handles location, contacts, medical details, cloud backup and ads — plus the emergency disclaimer." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal { max-width: 820px; margin: 0 auto; padding: 48px 22px 80px; }
+    .legal h1 { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 8px; }
+    .legal h2 { font-size: 1.25rem; margin: 34px 0 10px; }
+    .legal p, .legal li { line-height: 1.65; color: var(--text-dim, #a9b0c3); }
+    .legal ul { padding-left: 20px; }
+    .legal a { color: inherit; }
+    .legal .back { display: inline-block; margin-bottom: 24px; font-size: 0.9rem; }
+    .legal .updated { font-size: 0.85rem; opacity: 0.7; }
+    .legal .warn {
+      border: 1px solid rgba(255, 92, 92, 0.4);
+      background: rgba(255, 92, 92, 0.08);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+<main class="legal">
+  <a class="back" href="./">← Back to SafeTap SOS</a>
+  <h1>Privacy policy &amp; disclaimer</h1>
+  <p class="updated">Last updated: 26 November 2026 · Applies to the SafeTap SOS Android app and this website.</p>
+
+  <div class="warn">
+    <strong>SafeTap is a helper tool, not an emergency service.</strong>
+    <p>It is not connected to the police, ambulance or fire service. If you can dial, dial your local emergency number first
+    (999 in Bangladesh, 911 in North America). Delivery depends on your phone, your mobile network, your permissions and your
+    contacts' phones — a message can be delayed or fail.</p>
+  </div>
+
+  <h2>What the app stores on your phone</h2>
+  <ul>
+    <li>Your safety card: name, blood group, allergies, conditions, medication and notes.</li>
+    <li>Up to three emergency contacts: name, phone number and relation.</li>
+    <li>Alert history with time, trigger, location and delivery status.</li>
+    <li>Messages that were prepared but not yet sent.</li>
+  </ul>
+  <p>All of this lives in the app's private storage on the device. It is deleted when you use
+  “Reset all local data” in Settings, or when you uninstall the app. Nothing is sold and nothing is used for advertising.</p>
+
+  <h2>Location</h2>
+  <p>Location is read only when an alert starts and while the alert screen is open. The coordinates are used to build a
+  Google Maps link inside the alert text. The app does not track you in the background and keeps only the most recent fix.</p>
+
+  <h2>Messages and calls</h2>
+  <p>SafeTap does not send SMS and does not place calls on its own. It opens your messaging app or dialer with the recipient and
+  the text already filled in, and you press send or call. Your mobile carrier and messaging app handle delivery.
+  Blood group, allergies, conditions and medication are left out of the message unless you switch on
+  “Include medical card in alert text” in Settings.</p>
+
+  <h2>Cloud backup (optional, off by default)</h2>
+  <p>If you enable Firebase backup, the alert record — time, trigger, location link and the list of channels — is written to a
+  Google Cloud Firestore project under an anonymous account. You can turn it off at any time; turning it off stops new uploads
+  but does not delete records already written. Email us to have them removed.</p>
+
+  <h2>Ads</h2>
+  <p>The free plan shows one AdMob banner in Settings and History. Ads are never shown on the SOS button, the countdown or the
+  active-alert screen. Google may collect an advertising ID to serve ads. The paid plan removes all ad requests.</p>
+
+  <h2>Payments</h2>
+  <p>Paid plans are processed by NowPayments. The app never sees or stores card or wallet details; it only receives a payment
+  status from our server. Our server stores the payment id and the plan it unlocks, not your wallet keys.</p>
+
+  <h2>Permissions the app requests</h2>
+  <ul>
+    <li><strong>Location</strong> — to include a map link in the alert.</li>
+    <li><strong>Notifications</strong> — for the countdown and active-alert heads-up.</li>
+    <li><strong>Foreground service</strong> — to keep triple power-press detection and the siren running.</li>
+    <li><strong>Start after reboot</strong> — so the guard survives a restart.</li>
+    <li><strong>Internet</strong> — only for optional cloud backup and ads.</li>
+  </ul>
+  <p>SafeTap does not request the SMS or phone-call permissions.</p>
+
+  <h2>Children and medical advice</h2>
+  <p>SafeTap is not directed at children under 13 and is not a medical device. It gives no medical advice.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, privacy requests or deletion requests: <a href="mailto:support@safetap.app">support@safetap.app</a>.
+  We answer within 30 days.</p>
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <span class="brand-text">SafeTap<em>SOS</em></span>
+    <p>Kotlin · Jetpack Compose · Material 3 · Firebase · AdMob</p>
+  </div>
+  <p class="footer-note">Not a replacement for emergency services. If you can dial, dial.</p>
+</footer>
+</body>
+</html>
